@@ -28,6 +28,7 @@
 .guide-callout{padding:10px;border-radius:9px;background:#edf7ff;color:#285f7d;font-size:12px;line-height:1.55;margin:8px 0}
 .guide-callout b{display:block;color:#174d6a;margin-bottom:2px}
 .plain-value{font-size:13px;color:#48616f;margin-top:3px}
+.guide-step [data-guide-tool].selected{background:var(--blue);border-color:var(--blue);color:#fff;box-shadow:0 0 0 2px rgba(25,118,210,.15)}
 @media(max-width:760px){.mode-switch{margin-left:0}.mode-switch button{padding:9px 11px}.guide-step.current{outline-offset:2px}}
 </style>
 </head>
@@ -109,8 +110,8 @@
  <section class="section guide-step locked" id="guideStep4" data-guide-step="4">
 <h2><span><span class="num">4</span>길이·면적 측정</span></h2>
   <div class="guide-callout"><b>측정할 종류를 선택하세요.</b>길이와 원 지름은 두 점, 면적은 꼭짓점을 차례로 선택합니다.</div>
-  <div class="row"><button class="btn primary" data-guide-tool="length">↔ 길이 측정</button><button class="btn" data-guide-tool="circle">◯ 원 지름</button><button class="btn" data-guide-tool="polygon">⬡ 면적 측정</button></div>
-  <div class="row" style="margin-top:8px"><button class="btn small" id="guideFinishPolygon">✓ 면적 완료</button><button class="btn small" id="guideFieldTool">◎ 시야 원 지정</button></div>
+  <div class="row"><button class="btn" data-guide-tool="length">↔ 길이 측정</button><button class="btn" data-guide-tool="circle">◯ 원 지름</button><button class="btn" data-guide-tool="polygon">⬡ 면적 측정</button></div>
+  <div class="row" style="margin-top:8px"><button class="btn small" id="guideFinishPolygon">✓ 면적 완료</button><button class="btn small" data-guide-tool="field">◎ 시야 원 지정</button></div>
   <p class="hint">시야 원은 선택 사항입니다. 사진의 전체 시야 지름과 포함 면적을 확인할 때 사용합니다.</p>
  </section>
  <section class="section advanced-only">
@@ -455,9 +456,8 @@ update();setTool('pan');
  new MutationObserver(()=>{if($('#calMeta').textContent.includes('×'))goStep(2)}).observe($('#calMeta'),{childList:true,subtree:true,characterData:true});
  $('#applyCal').addEventListener('click',()=>setTimeout(()=>{if($('#calBadge').textContent==='보정됨'){document.body.classList.add('results-ready');goStep(3)}},120));
  new MutationObserver(()=>{if($('#analysisMeta').textContent.includes('×'))goStep(4)}).observe($('#analysisMeta'),{childList:true,subtree:true,characterData:true});
- $$('[data-guide-tool]').forEach(b=>b.onclick=()=>{$('[data-tool="'+b.dataset.guideTool+'"]').click()});
+ $$('[data-guide-tool]').forEach(b=>b.onclick=()=>{$$('[data-guide-tool]').forEach(x=>x.classList.toggle('selected',x===b));$('[data-tool="'+b.dataset.guideTool+'"]').click()});
  $('#guideFinishPolygon').onclick=()=>$('#finishPolygon').click();
- $('#guideFieldTool').onclick=()=>$('#fieldTool').click();
  const listObserver=new MutationObserver(()=>{if($('#measureList').children.length&&!$('#measureList .hint')){maxStep=Math.max(maxStep,6);$('#s5').classList.add('done');$('#s6').classList.add('active')}});
  listObserver.observe($('#measureList'),{childList:true,subtree:true});
  const scaleObserver=new MutationObserver(()=>{const value=$('#scaleValue').textContent;$('#scalePlain').textContent=value.startsWith('—')?'보정하면 ‘1 px = 몇 μm’인지 표시됩니다.':'1 px = '+value.replace(' μm/px',' μm')});
