@@ -455,7 +455,7 @@ update();setTool('pan');
  $('#fullMode').onclick=()=>setMode(false);
  $$('.guide-step h2').forEach(h=>h.onclick=()=>{const n=+h.closest('.guide-step').dataset.guideStep;if(n&&n<=maxStep)goStep(n,false)});
  new MutationObserver(()=>{if($('#calMeta').textContent.includes('×'))goStep(2)}).observe($('#calMeta'),{childList:true,subtree:true,characterData:true});
- $('#applyCal').addEventListener('click',()=>setTimeout(()=>{if($('#calBadge').textContent==='보정됨'){document.body.classList.add('results-ready');goStep(3)}},120));
+ $('#applyCal').addEventListener('click',()=>setTimeout(()=>{if($('#calBadge').textContent==='보정됨'){$('[data-tool="pan"]').click();$$('[data-guide-tool]').forEach(x=>x.classList.remove('selected'));document.body.classList.add('results-ready');goStep(3)}},120));
  new MutationObserver(()=>{if($('#analysisMeta').textContent.includes('×')){$('[data-tool="pan"]').click();$$('[data-guide-tool]').forEach(x=>x.classList.remove('selected'));goStep(4)}}).observe($('#analysisMeta'),{childList:true,subtree:true,characterData:true});
  $$('[data-guide-tool]').forEach(b=>b.onclick=()=>{$$('[data-guide-tool]').forEach(x=>x.classList.toggle('selected',x===b));$('[data-tool="'+b.dataset.guideTool+'"]').click()});
  $('#guideFinishPolygon').onclick=()=>$('#finishPolygon').click();
