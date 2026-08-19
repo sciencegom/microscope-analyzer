@@ -456,13 +456,23 @@ update();setTool('pan');
  $$('.guide-step h2').forEach(h=>h.onclick=()=>{const n=+h.closest('.guide-step').dataset.guideStep;if(n&&n<=maxStep)goStep(n,false)});
  new MutationObserver(()=>{if($('#calMeta').textContent.includes('×'))goStep(2)}).observe($('#calMeta'),{childList:true,subtree:true,characterData:true});
  $('#applyCal').addEventListener('click',()=>setTimeout(()=>{if($('#calBadge').textContent==='보정됨'){document.body.classList.add('results-ready');goStep(3)}},120));
- new MutationObserver(()=>{if($('#analysisMeta').textContent.includes('×'))goStep(4)}).observe($('#analysisMeta'),{childList:true,subtree:true,characterData:true});
+ new MutationObserver(()=>{if($('#analysisMeta').textContent.includes('×')){$('[data-tool="pan"]').click();$$('[data-guide-tool]').forEach(x=>x.classList.remove('selected'));goStep(4)}}).observe($('#analysisMeta'),{childList:true,subtree:true,characterData:true});
  $$('[data-guide-tool]').forEach(b=>b.onclick=()=>{$$('[data-guide-tool]').forEach(x=>x.classList.toggle('selected',x===b));$('[data-tool="'+b.dataset.guideTool+'"]').click()});
  $('#guideFinishPolygon').onclick=()=>$('#finishPolygon').click();
  const listObserver=new MutationObserver(()=>{if($('#measureList').children.length&&!$('#measureList .hint')){maxStep=Math.max(maxStep,6);$('#s5').classList.add('done');$('#s6').classList.add('active')}});
  listObserver.observe($('#measureList'),{childList:true,subtree:true});
  const scaleObserver=new MutationObserver(()=>{const value=$('#scaleValue').textContent;$('#scalePlain').textContent=value.startsWith('—')?'보정하면 ‘1 px = 몇 μm’인지 표시됩니다.':'1 px = '+value.replace(' μm/px',' μm')});
  scaleObserver.observe($('#scaleValue'),{childList:true,subtree:true,characterData:true});
+ canvas.addEventListener('pointerdown',e=>{
+  const calibrateActive=$('.toolbar [data-tool="calibrate"].active');
+  const analysisVisible=$('#canvasInfo').textContent.includes('분석 이미지');
+  if(e.button===0&&calibrateActive&&analysisVisible){
+   e.preventDefault();e.stopImmediatePropagation();
+   $('[data-tool="pan"]').click();
+   $$('[data-guide-tool]').forEach(x=>x.classList.remove('selected'));
+   $('#canvasInfo').textContent='측정 종류를 먼저 선택하세요: 길이 · 원 지름 · 면적';
+  }
+ },true);
  let middleRestore=null;
  canvas.addEventListener('pointerdown',e=>{
   if(e.button!==1)return;
