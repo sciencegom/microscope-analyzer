@@ -11,6 +11,7 @@
 <style>
 .step.done{background:#e5f7ef;color:var(--green);font-weight:700}
 .mode-switch{margin-left:auto;display:flex;gap:4px}
+.mode-label{display:flex;align-items:center;padding:0 5px;color:#617684;font-size:11px;font-weight:800;white-space:nowrap}
 .mode-switch button{border:1px solid #cbd9e1;background:#fff;color:#526b79;border-radius:8px;padding:7px 10px;font-size:11px;font-weight:750;white-space:nowrap}
 .mode-switch button.active{background:#173f56;border-color:#173f56;color:#fff}
 .guide-step{position:relative}
@@ -50,7 +51,7 @@
 <span class="step" id="s4">4 길이·면적</span>
 <span class="step" id="s5">5 결과 확인</span>
 <span class="step" id="s6">6 결과 저장</span>
-<span class="mode-switch"><button id="guideMode" class="active">학생용 안내</button><button id="fullMode">전체 설정</button></span>
+<span class="mode-switch"><span class="mode-label">화면 모드</span><button id="guideMode" class="active" title="필요한 기능을 순서대로 하나씩 보여줍니다">단계별 안내 모드</button><button id="fullMode" title="모든 설정과 도구를 한 화면에 표시합니다">전체 도구 모드</button></span>
 </nav>
 <main class="layout">
 <aside class="panel side" id="leftPanel">
