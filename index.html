@@ -8,52 +8,343 @@
 :root{--bg:#f4f8fb;--panel:#fff;--ink:#183044;--muted:#637888;--line:#dce7ee;--blue:#1976d2;--blue2:#e8f3ff;--green:#138a63;--amber:#b56a00;--red:#c53a4a;--shadow:0 8px 24px rgba(26,57,76,.08)}
 *{box-sizing:border-box}body{margin:0;font-family:"Segoe UI","Malgun Gothic",sans-serif;background:var(--bg);color:var(--ink);font-size:14px}button,input,select,textarea{font:inherit}button{cursor:pointer}.top{height:68px;background:linear-gradient(105deg,#0d6fb8,#1596a5);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 22px;box-shadow:var(--shadow)}.brand h1{font-size:20px;margin:0 0 3px}.brand p{margin:0;opacity:.82;font-size:12px}.top-actions{display:flex;align-items:center;gap:10px}.creator{font-size:11px;font-weight:800;letter-spacing:.08em;opacity:.9;white-space:nowrap}.status-pill{background:rgba(255,255,255,.16);padding:8px 12px;border-radius:999px;font-weight:700}.workflow{display:flex;gap:5px;padding:10px 16px;background:#fff;border-bottom:1px solid var(--line);overflow:auto}.step{white-space:nowrap;padding:7px 10px;border-radius:8px;background:#f1f5f7;color:#668; font-size:12px}.step.active{background:var(--blue2);color:var(--blue);font-weight:700}.layout{display:grid;grid-template-columns:300px minmax(480px,1fr) 300px;gap:12px;padding:12px;height:calc(100vh - 119px);min-height:620px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);overflow:auto}.side{padding:14px}.section{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:14px}.section:last-child{border:0}.section h2{font-size:14px;margin:0 0 10px;display:flex;align-items:center;justify-content:space-between}.num{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;background:var(--blue2);color:var(--blue);margin-right:7px}.hint{font-size:11px;color:var(--muted);line-height:1.5;margin:5px 0 8px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.field{margin-bottom:8px}.field label{display:block;font-size:12px;font-weight:700;margin:0 0 4px;color:#405768}.field input,.field select,.field textarea{width:100%;border:1px solid #cfdce4;border-radius:8px;padding:8px;background:#fff;color:var(--ink)}.field input:focus,.field select:focus{outline:2px solid #b8ddff;border-color:#6eb4ef}.upload{border:1.5px dashed #9ebccd;background:#f8fcff;border-radius:10px;padding:11px;text-align:center;margin-bottom:8px;transition:.2s}.upload.drag{border-color:var(--blue);background:var(--blue2)}.upload input{display:none}.upload button{border:0;background:transparent;color:var(--blue);font-weight:700}.filemeta{font-size:11px;color:var(--muted);margin-top:4px}.btn{border:1px solid #cad8e1;background:#fff;color:#314d60;border-radius:8px;padding:8px 10px;font-weight:650}.btn:hover{background:#f4f9fc}.btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}.btn.danger{color:var(--red)}.btn.small{font-size:11px;padding:6px 8px}.row{display:flex;gap:7px;align-items:center;flex-wrap:wrap}.check{display:flex;gap:6px;align-items:center;font-size:12px;margin:7px 0}.check input{accent-color:var(--blue)}details{border:1px solid var(--line);border-radius:9px;padding:8px;background:#fbfdfe}summary{font-weight:700;cursor:pointer}.workspace{display:flex;flex-direction:column;overflow:hidden}.toolbar{display:flex;gap:5px;padding:9px;border-bottom:1px solid var(--line);overflow:auto;background:#fbfdfe}.tool{min-width:max-content;border:1px solid #d2dfe7;background:#fff;border-radius:8px;padding:7px 9px;color:#40586a;font-size:12px;font-weight:650}.tool.active{background:var(--blue);border-color:var(--blue);color:#fff}.canvas-wrap{position:relative;flex:1;min-height:0;background:#202a31;overflow:hidden}.canvas-wrap canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:none}.canvas-empty{position:absolute;inset:0;display:grid;place-items:center;color:#d8e3e9;pointer-events:none;text-align:center}.canvas-empty strong{display:block;font-size:18px;margin-bottom:5px}.canvas-info{position:absolute;left:10px;bottom:10px;background:rgba(10,24,32,.78);color:#fff;padding:7px 10px;border-radius:7px;font-size:11px;pointer-events:none}.bottomtools{display:flex;justify-content:space-between;align-items:center;padding:8px;border-top:1px solid var(--line);background:#fff}.card{border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:9px;background:#fff}.card h3{font-size:12px;margin:0 0 8px;color:#496171}.metric{display:flex;justify-content:space-between;gap:8px;padding:4px 0;border-bottom:1px dashed #e5edf1;font-size:12px}.metric:last-child{border:0}.metric b{text-align:right;color:#142f42}.hero{background:linear-gradient(135deg,#e8f4ff,#eafaf5);border:1px solid #cbe5ee}.hero .value{font-size:23px;color:var(--blue);font-weight:800;margin:4px 0}.badge{display:inline-block;padding:4px 7px;border-radius:999px;font-size:11px;font-weight:800}.good{background:#e2f6ed;color:var(--green)}.warn{background:#fff1d8;color:var(--amber)}.bad{background:#ffe5e8;color:var(--red)}.neutral{background:#eef3f6;color:#607584}.notice{padding:9px;border-radius:8px;background:#fff7e7;color:#8b5900;font-size:11px;line-height:1.45;margin:7px 0}.notice.blue{background:#edf7ff;color:#286385}.measure-list{max-height:180px;overflow:auto}.measure-item{display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:6px;padding:7px 0;border-bottom:1px solid #edf2f5;font-size:11px}.dot{width:22px;height:22px;display:grid;place-items:center;border-radius:50%;background:#eaf4ff;color:var(--blue);font-weight:800}.iconbtn{border:0;background:transparent;color:#81929d;padding:3px}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);background:#172c39;color:#fff;border-radius:10px;padding:10px 15px;opacity:0;pointer-events:none;transition:.25s;z-index:10;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}table{width:100%;border-collapse:collapse;font-size:11px}th,td{padding:6px 4px;border-bottom:1px solid #e6edf1;text-align:right}th:first-child,td:first-child{text-align:left}.modal{position:fixed;inset:0;background:rgba(9,25,35,.56);display:none;place-items:center;z-index:20}.modal.show{display:grid}.modal-box{width:min(540px,92vw);max-height:86vh;overflow:auto;background:white;border-radius:14px;padding:18px;box-shadow:0 25px 70px rgba(0,0,0,.25)}.modal-box h2{margin:0 0 12px}.tests div{padding:8px;border-radius:7px;margin:5px 0;background:#eff8f3;color:#236749}.tests .fail{background:#ffebed;color:#a62b39}@media(max-width:1100px){.layout{grid-template-columns:270px 1fr}.right{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.right>.section{border:0}.layout{height:auto}.workspace{height:680px}}@media(max-width:760px){.layout{display:block}.panel{margin-bottom:10px}.workspace{height:600px}.right{display:block}.top{height:auto;padding:13px}.top-actions{margin-left:12px;align-items:flex-end;flex-direction:column}.creator{font-size:9px}.status-pill{display:none}}
 </style>
+<style>
+.step.done{background:#e5f7ef;color:var(--green);font-weight:700}
+.mode-switch{margin-left:auto;display:flex;gap:4px}
+.mode-switch button{border:1px solid #cbd9e1;background:#fff;color:#526b79;border-radius:8px;padding:7px 10px;font-size:11px;font-weight:750;white-space:nowrap}
+.mode-switch button.active{background:#173f56;border-color:#173f56;color:#fff}
+.guide-step{position:relative}
+.guide-step h2{cursor:pointer}
+.guide-step.current{outline:2px solid #8cc9ff;outline-offset:5px;border-radius:6px}
+.guide-step.current h2{color:var(--blue)}
+.guide-step.done h2:after{content:'✓ 완료';margin-left:auto;color:var(--green);font-size:11px}
+.guide-mode .guide-step.locked{display:none}
+.guide-mode .guide-step.done>:not(h2){display:none}
+.guide-mode .advanced-only{display:none!important}
+.guide-mode .toolbar .tool{display:none}
+.guide-mode .toolbar [data-tool="pan"],.guide-mode .toolbar #undo{display:inline-block}
+.guide-mode:not(.results-ready) .layout{grid-template-columns:300px minmax(480px,1fr)}
+.guide-mode:not(.results-ready) #rightPanel{display:none}
+.guide-callout{padding:10px;border-radius:9px;background:#edf7ff;color:#285f7d;font-size:12px;line-height:1.55;margin:8px 0}
+.guide-callout b{display:block;color:#174d6a;margin-bottom:2px}
+.plain-value{font-size:13px;color:#48616f;margin-top:3px}
+@media(max-width:760px){.mode-switch{margin-left:0}.mode-switch button{padding:9px 11px}.guide-step.current{outline-offset:2px}}
+</style>
 </head>
-<body>
-<header class="top"><div class="brand"><h1>🔬 현미경 이미지 길이·면적 분석기</h1><p>대물마이크로미터 실측값을 기준으로 정확하게 측정합니다 · 모든 이미지는 이 브라우저 안에서만 처리됩니다</p></div><div class="top-actions"><span class="creator" title="LJB · Daejeon Goejeong High School">CREATED BY LJB · DGHS</span><div class="status-pill" id="topStatus">보정이 필요합니다</div></div></header>
-<nav class="workflow"><span class="step active" id="s1">1 기준 이미지</span><span class="step" id="s2">2 보정선</span><span class="step" id="s3">3 시야 확인</span><span class="step" id="s4">4 분석 이미지</span><span class="step" id="s5">5 길이·면적</span><span class="step" id="s6">6 결과 저장</span></nav>
+<body class="guide-mode">
+<header class="top">
+<div class="brand">
+<h1>🔬 현미경 이미지 길이·면적 분석기</h1>
+<p>대물마이크로미터 실측값을 기준으로 정확하게 측정합니다 · 모든 이미지는 이 브라우저 안에서만 처리됩니다</p>
+</div>
+<div class="top-actions">
+<span class="creator" title="LJB · Daejeon Goejeong High School">CREATED BY LJB · DGHS</span>
+<div class="status-pill" id="topStatus">보정이 필요합니다</div>
+</div>
+</header>
+<nav class="workflow">
+<span class="step active" id="s1">1 기준 이미지</span>
+<span class="step" id="s2">2 보정선</span>
+<span class="step" id="s3">3 분석 이미지</span>
+<span class="step" id="s4">4 길이·면적</span>
+<span class="step" id="s5">5 결과 확인</span>
+<span class="step" id="s6">6 결과 저장</span>
+<span class="mode-switch"><button id="guideMode" class="active">학생용 안내</button><button id="fullMode">전체 설정</button></span>
+</nav>
 <main class="layout">
-<aside class="panel side">
- <section class="section"><h2><span><span class="num">1</span>이미지 불러오기</span></h2>
-  <div class="upload" data-kind="cal"><input id="calFile" type="file" accept="image/jpeg,image/png,image/webp"><button data-pick="cal">📏 기준 이미지 선택</button><div class="filemeta" id="calMeta">대물마이크로미터 사진</div></div>
-  <div class="upload" data-kind="analysis"><input id="analysisFile" type="file" accept="image/jpeg,image/png,image/webp"><button data-pick="analysis">🖼️ 분석 이미지 선택</button><div class="filemeta" id="analysisMeta">측정할 현미경 사진</div></div>
-  <div class="row"><button class="btn small" id="showCal">기준 이미지 보기</button><button class="btn small" id="showAnalysis">분석 이미지 보기</button></div>
+<aside class="panel side" id="leftPanel">
+ <section class="section guide-step current" id="guideStep1" data-guide-step="1">
+<h2>
+<span>
+<span class="num">1</span>기준 이미지 선택</span>
+</h2>
+  <div class="guide-callout"><b>먼저 대물마이크로미터 사진을 불러오세요.</b>현미경 사진의 픽셀을 실제 길이로 바꾸기 위한 기준 사진입니다.</div>
+  <div class="upload" data-kind="cal">
+<input id="calFile" type="file" accept="image/jpeg,image/png,image/webp">
+<button data-pick="cal">📏 기준 이미지 선택</button>
+<div class="filemeta" id="calMeta">대물마이크로미터 사진</div>
+</div>
+  <div class="row advanced-only">
+<button class="btn small" id="showCal">기준 이미지 보기</button>
+<button class="btn small" id="showAnalysis">분석 이미지 보기</button>
+</div>
  </section>
- <section class="section"><h2><span><span class="num">2</span>대물마이크로미터 보정</span></h2>
-  <div class="grid2"><div class="field"><label>보정 구간 실제 길이</label><input id="realLength" type="number" min="0" step="any" value="100"></div><div class="field"><label>단위</label><select id="realUnit"><option value="um">μm</option><option value="mm">mm</option></select></div></div>
+ <section class="section guide-step locked" id="guideStep2" data-guide-step="2">
+<h2>
+<span>
+<span class="num">2</span>대물마이크로미터 보정</span>
+</h2>
+  <div class="guide-callout"><b>실제 길이를 아는 눈금의 양 끝을 선택하세요.</b>긴 눈금 구간을 사용하면 클릭 오차가 줄어듭니다.</div>
+  <div class="grid2">
+<div class="field">
+<label>보정 구간 실제 길이</label>
+<input id="realLength" type="number" min="0" step="any" value="100">
+</div>
+<div class="field">
+<label>단위</label>
+<select id="realUnit">
+<option value="um">μm</option>
+<option value="mm">mm</option>
+</select>
+</div>
+</div>
   <p class="hint">기준 이미지에서 실제 길이를 아는 눈금 구간의 양 끝을 클릭하세요. 최대 3회 측정해 평균을 사용합니다.</p>
   <button class="btn primary" id="startCal">보정선 그리기</button>
-  <div id="calTableWrap" style="margin-top:8px"></div>
-  <div class="row" style="margin-top:8px"><button class="btn small" id="applyCal">평균 보정값 적용</button><button class="btn small danger" id="clearCal">보정값 지우기</button></div>
+  <div id="calTableWrap" style="margin-top:8px">
+</div>
+  <div class="row" style="margin-top:8px">
+<button class="btn small" id="applyCal">평균 보정값 적용</button>
+<button class="btn small danger" id="clearCal">보정값 지우기</button>
+</div>
  </section>
- <section class="section"><h2><span><span class="num">3</span>광학 정보</span></h2>
-  <div class="grid2"><div class="field"><label>접안렌즈 배율</label><input id="ocular" type="number" value="10" min="0.1" step="any"></div><div class="field"><label>시야수 FN</label><input id="fn" type="number" value="18" min="0.1" step="any"></div></div>
-  <div class="field"><label>대물렌즈 배율</label><select id="objective"><option>4</option><option>10</option><option>20</option><option selected>40</option><option>60</option><option>100</option><option value="custom">직접 입력</option></select></div>
-  <div class="field" id="customObjWrap" hidden><label>직접 입력 배율</label><input id="customObj" type="number" value="40" min="0.1" step="any"></div>
-  <p class="hint">FN 기반 시야 지름은 <b>FN ÷ 대물렌즈 배율</b>로 계산합니다. 접안렌즈 배율은 총배율 표시에만 사용됩니다.</p>
+ <section class="section guide-step locked" id="guideStep3" data-guide-step="3">
+<h2><span><span class="num">3</span>분석 이미지 선택</span></h2>
+  <div class="guide-callout"><b>이제 측정할 현미경 사진을 불러오세요.</b>기준 사진과 같은 렌즈·카메라·줌 조건의 사진을 사용해야 합니다.</div>
+  <div class="upload" data-kind="analysis">
+<input id="analysisFile" type="file" accept="image/jpeg,image/png,image/webp">
+<button data-pick="analysis">🖼️ 분석 이미지 선택</button>
+<div class="filemeta" id="analysisMeta">측정할 현미경 사진</div>
+</div>
+ </section>
+ <section class="section guide-step locked" id="guideStep4" data-guide-step="4">
+<h2><span><span class="num">4</span>길이·면적 측정</span></h2>
+  <div class="guide-callout"><b>측정할 종류를 선택하세요.</b>길이와 원 지름은 두 점, 면적은 꼭짓점을 차례로 선택합니다.</div>
+  <div class="row"><button class="btn primary" data-guide-tool="length">↔ 길이 측정</button><button class="btn" data-guide-tool="circle">◯ 원 지름</button><button class="btn" data-guide-tool="polygon">⬡ 면적 측정</button></div>
+  <div class="row" style="margin-top:8px"><button class="btn small" id="guideFinishPolygon">✓ 면적 완료</button><button class="btn small" id="guideFieldTool">◎ 시야 원 지정</button></div>
+  <p class="hint">시야 원은 선택 사항입니다. 사진의 전체 시야 지름과 포함 면적을 확인할 때 사용합니다.</p>
+ </section>
+ <section class="section advanced-only">
+<h2>
+<span>
+광학 정보·시야 검산</span>
+</h2>
+  <div class="grid2">
+<div class="field">
+<label>접안렌즈 배율</label>
+<input id="ocular" type="number" value="10" min="0.1" step="any">
+</div>
+<div class="field">
+<label>시야수(FN) — 접안렌즈에 표시된 시야 크기</label>
+<input id="fn" type="number" value="18" min="0.1" step="any">
+</div>
+</div>
+  <div class="field">
+<label>대물렌즈 배율</label>
+<select id="objective">
+<option>4</option>
+<option>10</option>
+<option>20</option>
+<option selected>40</option>
+<option>60</option>
+<option>100</option>
+<option value="custom">직접 입력</option>
+</select>
+</div>
+  <div class="field" id="customObjWrap" hidden>
+<label>직접 입력 배율</label>
+<input id="customObj" type="number" value="40" min="0.1" step="any">
+</div>
+  <p class="hint">FN은 이론적인 시야 크기를 검산할 때만 사용합니다. 값을 몰라도 길이·면적 측정은 가능합니다. 이론 시야 지름은 <b>FN ÷ 대물렌즈 배율</b>로 계산합니다.</p>
   <button class="btn" id="fieldTool">◯ 시야 원 3점 지정</button>
   <div class="notice blue">FN 계산은 검산용입니다. 실제 측정에는 대물마이크로미터 보정값이 우선합니다.</div>
-  <details><summary>촬영 조건 및 주의사항</summary><label class="check"><input type="checkbox" id="cropped"> 이미지가 크롭됨</label><label class="check"><input type="checkbox" id="resized"> 이미지가 리사이즈됨</label><label class="check"><input type="checkbox" id="changed"> 기준 이미지와 촬영 조건이 다름</label><div class="field"><label>촬영 조건 메모</label><textarea id="conditionMemo" rows="2" placeholder="현미경·카메라·어댑터 등"></textarea></div></details>
+  <details>
+<summary>촬영 조건 및 주의사항</summary>
+<label class="check">
+<input type="checkbox" id="cropped"> 이미지가 크롭됨</label>
+<label class="check">
+<input type="checkbox" id="resized"> 이미지가 리사이즈됨</label>
+<label class="check">
+<input type="checkbox" id="changed"> 기준 이미지와 촬영 조건이 다름</label>
+<div class="field">
+<label>촬영 조건 메모</label>
+<textarea id="conditionMemo" rows="2" placeholder="현미경·카메라·어댑터 등">
+</textarea>
+</div>
+</details>
  </section>
- <section class="section"><h2><span>보정 프로필</span></h2><div class="field"><label>프로필 이름</label><input id="profileName" placeholder="예: 학교현미경A_40배"></div><div class="row"><button class="btn small" id="saveProfile">저장</button><select id="profiles" style="flex:1;min-width:110px;padding:6px;border:1px solid #ccdbe4;border-radius:8px"><option value="">저장된 프로필</option></select><button class="btn small" id="loadProfile">불러오기</button></div></section>
+ <section class="section advanced-only">
+<h2>
+<span>보정 프로필</span>
+</h2>
+<div class="field">
+<label>프로필 이름</label>
+<input id="profileName" placeholder="예: 학교현미경A_40배">
+</div>
+<div class="row">
+<button class="btn small" id="saveProfile">저장</button>
+<select id="profiles" style="flex:1;min-width:110px;padding:6px;border:1px solid #ccdbe4;border-radius:8px">
+<option value="">저장된 프로필</option>
+</select>
+<button class="btn small" id="loadProfile">불러오기</button>
+</div>
+</section>
 </aside>
 
 <section class="panel workspace">
- <div class="toolbar"><button class="tool active" data-tool="pan">✋ 이동</button><button class="tool" data-tool="calibrate">📏 보정선</button><button class="tool" data-tool="length">↔ 길이</button><button class="tool" data-tool="circle">◯ 원 지름</button><button class="tool" data-tool="polygon">⬡ 면적</button><button class="tool" id="finishPolygon">✓ 면적 완료</button><button class="tool" data-tool="field">◎ 시야 원</button><button class="tool" data-tool="scale">▬ 스케일바</button><button class="tool" id="undo">↶ 실행 취소</button></div>
- <div class="canvas-wrap" id="canvasWrap"><canvas id="canvas"></canvas><div class="canvas-empty" id="empty"><div><strong>이미지를 불러오세요</strong>기준 이미지로 보정한 뒤 분석 이미지에서 측정합니다.</div></div><div class="canvas-info" id="canvasInfo">100% · 이미지 없음</div></div>
- <div class="bottomtools"><div class="row"><button class="btn small" id="fit">화면 맞춤</button><button class="btn small" id="actual">실제 크기</button><label class="check"><input type="checkbox" id="showOverlay" checked> 분석 표시</label></div><div class="row"><button class="btn small danger" id="clearMeasures">측정 전체 삭제</button></div></div>
+ <div class="toolbar">
+<button class="tool active" data-tool="pan">✋ 이동</button>
+<button class="tool" data-tool="calibrate">📏 보정선</button>
+<button class="tool" data-tool="length">↔ 길이</button>
+<button class="tool" data-tool="circle">◯ 원 지름</button>
+<button class="tool" data-tool="polygon">⬡ 면적</button>
+<button class="tool" id="finishPolygon">✓ 면적 완료</button>
+<button class="tool" data-tool="field">◎ 시야 원</button>
+<button class="tool" data-tool="scale">▬ 스케일바</button>
+<button class="tool" id="undo">↶ 실행 취소</button>
+</div>
+ <div class="canvas-wrap" id="canvasWrap">
+<canvas id="canvas">
+</canvas>
+<div class="canvas-empty" id="empty">
+<div>
+<strong>이미지를 불러오세요</strong>기준 이미지로 보정한 뒤 분석 이미지에서 측정합니다.</div>
+</div>
+<div class="canvas-info" id="canvasInfo">100% · 이미지 없음</div>
+</div>
+ <div class="bottomtools">
+<div class="row">
+<button class="btn small" id="fit">화면 맞춤</button>
+<button class="btn small" id="actual">실제 크기</button>
+<label class="check">
+<input type="checkbox" id="showOverlay" checked> 분석 표시</label>
+</div>
+<div class="row">
+<button class="btn small danger" id="clearMeasures">측정 전체 삭제</button>
+</div>
+</div>
 </section>
 
-<aside class="panel side right">
- <section class="section"><h2><span>보정 결과</span><span id="calBadge" class="badge neutral">미보정</span></h2><div class="card hero"><div class="hint">최종 축척</div><div class="value" id="scaleValue">— μm/px</div><div class="metric"><span>px/μm</span><b id="pxPerUm">—</b></div><div class="metric"><span>반복 측정</span><b id="repeatCount">0회</b></div><div class="metric"><span>표준편차</span><b id="calSd">—</b></div></div></section>
- <section class="section"><h2>광학·시야 분석</h2><div class="card"><div class="metric"><span>총배율</span><b id="totalMag">400×</b></div><div class="metric"><span>이론 시야 지름</span><b id="theoryDiameter">450 μm</b></div><div class="metric"><span>지정 시야 지름</span><b id="measuredDiameter">—</b></div><div class="metric"><span>실측 시야 지름</span><b id="actualDiameter">—</b></div><div class="metric"><span>전체 시야 면적</span><b id="fieldArea">—</b></div><div class="metric"><span>이미지 유효 면적</span><b id="effectiveArea">—</b></div><div class="metric"><span>포함 비율</span><b id="coverage">—</b></div></div><div id="compareNotice" class="notice">시야 원을 지정하면 이론값과 실측값을 비교합니다.</div></section>
- <section class="section"><h2>측정 결과</h2><div class="card"><div class="metric"><span>길이 측정</span><b id="lengthCount">0개</b></div><div class="metric"><span>길이 평균</span><b id="lengthMean">—</b></div><div class="metric"><span>길이 표준편차</span><b id="lengthSd">—</b></div><div class="metric"><span>면적 측정</span><b id="areaCount">0개</b></div></div><div class="measure-list" id="measureList"></div></section>
- <section class="section"><h2>스케일바·저장</h2><div class="grid2"><div class="field"><label>스케일바 길이</label><select id="scaleLength"><option>5</option><option>10</option><option>20</option><option selected>50</option><option>100</option><option>200</option></select></div><div class="field"><label>색상</label><select id="scaleColor"><option value="white">흰색</option><option value="black">검은색</option></select></div></div><label class="check"><input type="checkbox" id="scaleBg" checked> 배경 상자 표시</label><div class="row"><button class="btn" id="addScale">스케일바 삽입</button><button class="btn primary" id="savePng">PNG 저장</button><button class="btn" id="saveCsv">CSV 저장</button></div><div class="row" style="margin-top:7px"><button class="btn small" id="runTests">계산 예제 검증</button><button class="btn small" id="helpBtn">사용 방법</button></div></section>
+<aside class="panel side right" id="rightPanel">
+ <section class="section">
+<h2>
+<span>보정 결과</span>
+<span id="calBadge" class="badge neutral">미보정</span>
+</h2>
+<div class="card hero">
+<div class="hint">사진 1픽셀의 실제 길이</div>
+<div class="value" id="scaleValue">— μm/px</div>
+<div class="plain-value" id="scalePlain">보정하면 ‘1 px = 몇 μm’인지 표시됩니다.</div>
+<div class="metric advanced-only">
+<span>px/μm</span>
+<b id="pxPerUm">—</b>
+</div>
+<div class="metric">
+<span>보정한 횟수</span>
+<b id="repeatCount">0회</b>
+</div>
+<div class="metric">
+<span>표준편차</span>
+<b id="calSd">—</b>
+</div>
+</div>
+</section>
+ <section class="section">
+<h2>광학·시야 분석</h2>
+<div class="card">
+<div class="metric">
+<span>총배율</span>
+<b id="totalMag">400×</b>
+</div>
+<div class="metric">
+<span>이론 시야 지름</span>
+<b id="theoryDiameter">450 μm</b>
+</div>
+<div class="metric">
+<span>지정 시야 지름</span>
+<b id="measuredDiameter">—</b>
+</div>
+<div class="metric">
+<span>실측 시야 지름</span>
+<b id="actualDiameter">—</b>
+</div>
+<div class="metric">
+<span>전체 시야 면적</span>
+<b id="fieldArea">—</b>
+</div>
+<div class="metric">
+<span>이미지 유효 면적</span>
+<b id="effectiveArea">—</b>
+</div>
+<div class="metric">
+<span>포함 비율</span>
+<b id="coverage">—</b>
+</div>
+</div>
+<div id="compareNotice" class="notice">시야 원을 지정하면 이론값과 실측값을 비교합니다.</div>
+</section>
+ <section class="section">
+<h2>측정 결과</h2>
+<div class="card">
+<div class="metric">
+<span>길이 측정</span>
+<b id="lengthCount">0개</b>
+</div>
+<div class="metric">
+<span>길이 평균</span>
+<b id="lengthMean">—</b>
+</div>
+<div class="metric">
+<span>길이 표준편차</span>
+<b id="lengthSd">—</b>
+</div>
+<div class="metric">
+<span>면적 측정</span>
+<b id="areaCount">0개</b>
+</div>
+</div>
+<div class="measure-list" id="measureList">
+</div>
+</section>
+ <section class="section">
+<h2>스케일바·저장</h2>
+<div class="grid2">
+<div class="field">
+<label>스케일바 길이</label>
+<select id="scaleLength">
+<option>5</option>
+<option>10</option>
+<option>20</option>
+<option selected>50</option>
+<option>100</option>
+<option>200</option>
+</select>
+</div>
+<div class="field">
+<label>색상</label>
+<select id="scaleColor">
+<option value="white">흰색</option>
+<option value="black">검은색</option>
+</select>
+</div>
+</div>
+<label class="check">
+<input type="checkbox" id="scaleBg" checked> 배경 상자 표시</label>
+<div class="row">
+<button class="btn" id="addScale">스케일바 삽입</button>
+<button class="btn primary" id="savePng">PNG 저장</button>
+<button class="btn" id="saveCsv">CSV 저장</button>
+</div>
+<div class="row" style="margin-top:7px">
+<button class="btn small" id="runTests">계산 예제 검증</button>
+<button class="btn small" id="helpBtn">사용 방법</button>
+</div>
+</section>
 </aside>
 </main>
-<div class="toast" id="toast"></div>
-<div class="modal" id="modal"><div class="modal-box"><div class="row" style="justify-content:space-between"><h2 id="modalTitle">안내</h2><button class="btn small" id="closeModal">닫기</button></div><div id="modalBody"></div></div></div>
+<div class="toast" id="toast">
+</div>
+<div class="modal" id="modal">
+<div class="modal-box">
+<div class="row" style="justify-content:space-between">
+<h2 id="modalTitle">안내</h2>
+<button class="btn small" id="closeModal">닫기</button>
+</div>
+<div id="modalBody">
+</div>
+</div>
+</div>
 <script>
+
 (()=>{'use strict';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const state={images:{cal:null,analysis:null},active:'analysis',tool:'pan',scale:1,pan:{x:0,y:0},drag:null,points:[],calibrations:[],umPerPx:null,field:null,measures:[],scaleBar:null,show:true};
@@ -130,6 +421,50 @@ $('#helpBtn').onclick=()=>showModal('사용 방법',`<ol><li>대물마이크로�
 $('#runTests').onclick=()=>{const tests=[['예제 1 축척',18/40*1000/1800,.25],['예제 1 시야 면적',Math.PI*(450/2)**2,159043.13],['예제 2 축척',100/500,.2],['예제 2 물체 길이',300*(100/500),60],['예제 3 축소 후 축척',.2/.5,.4],['예제 3 실제 길이 보존',150*(.2/.5),60]];const html=tests.map(([n,v,e])=>{const ok=Math.abs(v-e)<=Math.max(1e-8,Math.abs(e)*1e-5);return `<div class="${ok?'':'fail'}">${ok?'✓':'✕'} ${n}: ${fmt(v,5)} (예상 ${fmt(e,5)})</div>`}).join('');showModal('계산 예제 검증',`<div class="tests">${html}</div><p class="hint">모든 계산은 브라우저에서 실행되었으며, 요청서의 세 가지 기본 예제를 확인합니다.</p>`)};
 update();setTool('pan');
 })();
+
+</script>
+<script>
+(()=>{
+ const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+ let maxStep=1,currentStep=1;
+ function renderGuide(){
+  $$('.guide-step').forEach(section=>{
+   const n=+section.dataset.guideStep;
+   if(!n)return;
+   section.classList.toggle('current',n===currentStep);
+   section.classList.toggle('done',n<maxStep&&n!==currentStep);
+   section.classList.toggle('locked',n>maxStep);
+  });
+  for(let n=1;n<=6;n++){const el=$('#s'+n);if(!el)continue;el.classList.toggle('active',n===currentStep);el.classList.toggle('done',n<maxStep)}
+ }
+ function goStep(n,advance=true){
+  if(advance)maxStep=Math.max(maxStep,n);
+  if(n>maxStep)return;
+  currentStep=n;renderGuide();
+  if(document.body.classList.contains('guide-mode'))$('#guideStep'+n)?.scrollIntoView({behavior:'smooth',block:'nearest'});
+ }
+ function setMode(guide){
+  document.body.classList.toggle('guide-mode',guide);
+  $('#guideMode').classList.toggle('active',guide);
+  $('#fullMode').classList.toggle('active',!guide);
+  if(guide)renderGuide();
+ }
+ $('#guideMode').onclick=()=>setMode(true);
+ $('#fullMode').onclick=()=>setMode(false);
+ $$('.guide-step h2').forEach(h=>h.onclick=()=>{const n=+h.closest('.guide-step').dataset.guideStep;if(n&&n<=maxStep)goStep(n,false)});
+ new MutationObserver(()=>{if($('#calMeta').textContent.includes('×'))goStep(2)}).observe($('#calMeta'),{childList:true,subtree:true,characterData:true});
+ $('#applyCal').addEventListener('click',()=>setTimeout(()=>{if($('#calBadge').textContent==='보정됨'){document.body.classList.add('results-ready');goStep(3)}},120));
+ new MutationObserver(()=>{if($('#analysisMeta').textContent.includes('×'))goStep(4)}).observe($('#analysisMeta'),{childList:true,subtree:true,characterData:true});
+ $$('[data-guide-tool]').forEach(b=>b.onclick=()=>{$('[data-tool="'+b.dataset.guideTool+'"]').click()});
+ $('#guideFinishPolygon').onclick=()=>$('#finishPolygon').click();
+ $('#guideFieldTool').onclick=()=>$('#fieldTool').click();
+ const listObserver=new MutationObserver(()=>{if($('#measureList').children.length&&!$('#measureList .hint')){maxStep=Math.max(maxStep,6);$('#s5').classList.add('done');$('#s6').classList.add('active')}});
+ listObserver.observe($('#measureList'),{childList:true,subtree:true});
+ const scaleObserver=new MutationObserver(()=>{const value=$('#scaleValue').textContent;$('#scalePlain').textContent=value.startsWith('—')?'보정하면 ‘1 px = 몇 μm’인지 표시됩니다.':'1 px = '+value.replace(' μm/px',' μm')});
+ scaleObserver.observe($('#scaleValue'),{childList:true,subtree:true,characterData:true});
+ renderGuide();
+})();
 </script>
 </body>
 </html>
+
