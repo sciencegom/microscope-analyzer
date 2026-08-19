@@ -463,6 +463,22 @@ update();setTool('pan');
  listObserver.observe($('#measureList'),{childList:true,subtree:true});
  const scaleObserver=new MutationObserver(()=>{const value=$('#scaleValue').textContent;$('#scalePlain').textContent=value.startsWith('—')?'보정하면 ‘1 px = 몇 μm’인지 표시됩니다.':'1 px = '+value.replace(' μm/px',' μm')});
  scaleObserver.observe($('#scaleValue'),{childList:true,subtree:true,characterData:true});
+ let middleRestore=null;
+ canvas.addEventListener('pointerdown',e=>{
+  if(e.button!==1)return;
+  e.preventDefault();
+  const active=$('.toolbar [data-tool].active');
+  middleRestore=active?.dataset.tool||'pan';
+  $('[data-tool="pan"]').click();
+ },true);
+ const restoreAfterMiddle=()=>{
+  if(!middleRestore)return;
+  const tool=middleRestore;middleRestore=null;
+  if(tool!=='pan')setTimeout(()=>$('[data-tool="'+tool+'"]').click(),0);
+ };
+ canvas.addEventListener('pointerup',e=>{if(e.button===1)restoreAfterMiddle()});
+ canvas.addEventListener('pointercancel',restoreAfterMiddle);
+ canvas.addEventListener('auxclick',e=>{if(e.button===1)e.preventDefault()});
  renderGuide();
 })();
 </script>
